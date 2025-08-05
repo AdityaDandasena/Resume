@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Arial", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: white;
+  background: #222629;
+}
+/*navbar*/
+.navbar .logo {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+nav {
+  background-color: #222626;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+.navbar ul li {
+  margin-left: 3rem;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: 0.5s;
+}
+.navbar i {
+  font-size: 2rem;
+   height: auto;
+  display:none;
+}
+.navbar ul li a:hover,
+.navbar ul li.active a {
+  color: #86c232;
+}
+  /*resume section*/
+
+.heading span {
+  color: #86c232;
+} 
+.resume {
+  margin: 10rem 10rem 0 10rem;
+}
+.resume-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 8rem;
+}
+.resume-box h2 {
+  font-size: 4.5rem;
+}
+.resume-box p {
+  font-size: 1.6rem;
+}
+.resume-box .desc {
+  margin: 2rem 0 2.5rem;
+}
+.resume-box .resume-btn {
+  color: white;
+  width: 100%;
+  height: 5.3rem;
+  background: #2d3236;
+  border: 0.2rem solid #2d3236;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+.resume-box .resume-btn.active {
+  border-color: #86c232;
+  color: #86c232;
+}
+.resume-details {
+  display: none;
+}
+.resume-details.active {
+  display: block;
+}
+.resume-box .heading {
+  font-size: 3.5rem;
+  text-align: left;
+}
+.resume-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  height: 35rem;
+  overflow: auto;
+}
+.resume-list::-webkit-scrollbar {
+  width: 0.7rem;
+}
+.resume-list::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 1rem;
+}
+.resume-list:hover::-webkit-scrollbar-thumb {
+  background: #86c232;
+}
+.resume-list .resume-item {
+  background: #2d3236;
+  border-radius: 0.8rem;
+  padding: 3rem 2.5rem;
+  height: calc((45rem - 2rem) / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resume-item .year {
+  color: #86c232;
+}
+.resume-item h3 {
+  font-size: 2.2rem;
+}
+.resume-item .company {
+  position: relative;
+  margin: 1rem 0 1rem 0;
+}
+.resume-item .company::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%);
+  padding: 0.5rem;
+  background: #86c232;
+  border-radius: 50%;
+  margin-left: -1rem;
+}
+/*skill part*/
+.skills-list h2 {
+  font-size: 2.5rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: underline solid #86c232;
+  margin-bottom: 3rem;
+}
+.skills-item i {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.skills-item span {
+  font-size: 1.5rem;
+}
+.skills-item .progress-line {
+  position: relative;
+  border-radius: 5rem;
+  width: 100%;
+  height: 0.6rem;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+.progress-line div {
+  height: 0.6rem;
+  width: 0%;
+  background: #86c232;
+}
+.progress-line div span {
+  display: flex;
+  height: 2.4rem;
+  width: 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-radius: 28%;
+  border: 3px solid #86c232;
+  background: #fff;
+  color: black;
+  float: right;
+  margin-top: -1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.progress-line .htmll {
+  animation: htmll 2s linear forwards;
+}
+.progress-line .css {
+  animation: css 2s linear forwards;
+}
+.progress-line .js {
+  animation: js 2s linear forwards;
+}
+.progress-line .python {
+  animation: python 2s linear forwards;
+}
+.progress-line .aws {
+  animation: aws 2s linear forwards;
+}
+.progress-line .ps {
+  animation: ps 2s linear forwards;
+}
+@keyframes htmll {
+  100% {
+    width: 86%;
+  }
+}
+@keyframes css {
+  100% {
+    width: 80%;
+  }
+}
+@keyframes js {
+  100% {
+    width: 70%;
+  }
+}
+@keyframes python {
+  100% {
+    width: 65%;
+  }
+}
+@keyframes aws {
+  100% {
+    width: 90%;
+  }
+}
+@keyframes ps {
+  100% {
+    width: 88%;
+  }
+}
+/* abotme part */
+.resume-details .aboutme .about-list{
+  height: auto;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+}
+.about-list .about-item {
+  height: auto;
+  padding: 0 0 .5rem;
+  background: transparent;
+
+}
+.about-list .about-item p{
+  color: #86c232;
+}
+.about-list .about-item p span{
+  color: white;
+  margin-left: 1rem;
+  font-size: 1.8rem;
+}
+/*media quries */
+/*nav bar*/
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #222629;
+    width: 100%;
+    display:none;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 1.7rem 0;
+    text-align: center;
+  }
+
+  .navbar  i {
+    display: block;
+    cursor: pointer;
+  }
+}
+/* Responsive styles */
+@media (max-width: 992px) {
+  .resume {
+    margin: 8rem 5rem 0 5rem;
+  }
+  .resume-container {
+    gap: 4rem;
+  }
+  .resume-box h2 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .resume {
+    margin: 8rem 2rem 0 2rem;
+  }
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+  .resume-box h2 {
+    font-size: 3rem;
+  }
+  .resume-box p {
+    font-size: 1.4rem;
+  }
+}

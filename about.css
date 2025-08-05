@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Arial", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: auto;
+  color: white;
+  background: #222629;
+}
+/*navbar*/
+.navbar .logo {
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+nav {
+  background-color: #222626;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+.navbar ul li {
+  margin-left: 3rem;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: 0.5s;
+}
+.navbar i {
+  font-size: 2rem;
+ height: auto;
+  display: none;
+}
+.navbar ul li a:hover,
+.navbar ul li.active2 a {
+  color: #86c232;
+}
+/* abotme part */
+.about {
+  margin: 10rem 10rem 0 10rem;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 8rem;
+  font-size: 1.7rem;
+}
+.about span{
+  color: #86c232;
+}
+.about-list .about-item {
+  height: auto;
+  padding: 0 0 .5rem;
+  background: transparent;
+
+}
+.about-list .about-item p span{
+  color: white;
+  margin-left: 1rem;
+  font-size: 1.8rem;
+}
+.about-list .about-item p{
+  color: #86c232;
+}
+.btn-box {
+  padding-top: 1rem;
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 3rem;
+  background-color: #86c232;
+  border: 2px solid #86c232;
+  border-radius: 4rem;
+  box-shadow: 0 0 10px #86c232;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn:hover {
+  background: transparent;
+  color: #86c232;
+  box-shadow: none;
+}
+/* education-part */
+.resume-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  height: 30rem;
+  overflow: auto;
+  margin-bottom: 3rem;
+}
+.resume-list::-webkit-scrollbar {
+  width: 0.7rem;
+}
+.resume-list::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 1rem;
+}
+.resume-list:hover::-webkit-scrollbar-thumb {
+  background: #86c232;
+}
+.resume-list .resume-item {
+  background: #2d3236;
+  border-radius: 0.8rem;
+  padding: 3rem 2.5rem;
+  height: calc((45rem - 2rem) / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resume-item .year {
+  color: #86c232;
+}
+.resume-item h3 {
+  font-size: 2.2rem;
+}
+.resume-item .company {
+  position: relative;
+  margin: 1rem 0 1rem 0;
+}
+.resume-item .company::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%);
+  padding: 0.5rem;
+  background: #86c232;
+  border-radius: 50%;
+  margin-left: -1rem;
+}
+.desc {
+  margin: 2rem 0 2.5rem;
+}
+
+/*media quries */
+/*nav bar*/
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #222629;
+    width: 100%;
+    display:none;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 1.7rem 0;
+    text-align: center;
+  }
+
+  .navbar  i {
+    display: block;
+    cursor: pointer;
+  }
+}
+/*about section */
+@media (max-width: 992px) {
+  .about {
+    grid-template-columns: 1fr;
+    margin: 10rem 2rem 0 2rem;
+  }
+}
+/*resume list*/
+@media (max-width: 768px) {
+  .resume-list {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+
+  .navbar {
+    padding: 1.5rem;
+  }
+
+  .navbar .logo {
+    font-size: 2.5rem;
+  }
+
+  .navbar i {
+    font-size: 2.5rem;
+  }
+}
